@@ -1,0 +1,63 @@
+[
+    {
+        "text": "Workflow",
+        "heading": "true",
+        "translate": "sidebar.heading.HEADER"
+    },
+    {
+        "text": "Dashboard",
+        "sref": "#",
+        "icon": "icon-speedometer",
+        "submenu": [
+            {"text": "Dashboard v1",       "sref": "app.dashboard"},
+            {"text": "Dashboard v2",       "sref": "app.dashboard_v2" },
+            {"text": "Dashboard v3",       "sref": "app.dashboard_v3" }
+        ],
+        "translate": "sidebar.nav.DASHBOARD"
+    },
+    {
+        "text": "Brewer's Assistant",
+        "sref": "app.brewers-assistance",
+        "icon": "fa fa-paperclip",
+        "alert": "2",
+        "translate": "sidebar.nav.BREWERSASSISTANT"
+    },
+    {
+        "text": "Components",
+        "heading": "true",
+        "translate": "sidebar.heading.COMPONENTS"
+    },
+    {
+        "text": "Batches",
+        "sref": "app.batches",
+        "icon": "fa fa-clipboard",
+        "alert": "2",
+        "translate": "sidebar.nav.batches.BATCHES"
+    },
+    {
+        "text": "Recipes",
+        "sref": "app.recipes",
+        "icon": "fa fa-beer",
+        "alert": "2",
+        "translate": "sidebar.nav.RECIPES"
+    },
+    {
+        "text": "Inventory",
+        "sref": "app.inventory",
+        "icon": "fa fa-calculator",
+        "alert": "2",
+        "translate": "sidebar.nav.inventory.INVENTORY",
+        "submenu": [
+            {"text": "Fermentables",       "sref": "app.dashboard"},
+            {"text": "Hops",       "sref": "app.dashboard_v2" },
+            {"text": "Yeast",       "sref": "app.dashboard_v3" }
+        ]
+    },
+    {
+        "text": "Tools",
+        "sref": "app.tools",
+        "icon": "fa fa-calculator",
+        "alert": "2",
+        "translate": "sidebar.nav.TOOLS"
+    }
+]
