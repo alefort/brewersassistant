@@ -36,14 +36,15 @@
     "sidebar": {
         "WELCOME": "Welcome",
         "heading": {
-            "HEADER": "Workflow",
-            "COMPONENTS": "Components"
+            "HEADER": "Control Centre",
+            "COMPONENTS": "Management"
         },
         "nav": {
             "DASHBOARD": "Dashboard",
             "WIDGETS": "Widgets",
             "RECIPES": "Recipes",
             "BREWERSASSISTANT": "Brewer's Assistant",
+            "SCHEDULING": "Scheduling",
             "TOOLS": "Tools",
             "inventory": {
                 "INVENTORY":"Inventory"

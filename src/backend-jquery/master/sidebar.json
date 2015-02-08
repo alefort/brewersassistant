@@ -122,7 +122,7 @@
       "submenu": [
         { "text": "Mailbox",  "href": "mailbox.html", "translate": "sidebar.nav.extra.MAILBOX" },
         { "text": "Timeline", "href": "timeline.html", "translate": "sidebar.nav.extra.TIMELINE" },
-        { "text": "Calendar", "href": "calendar.html", "translate": "sidebar.nav.extra.CALENDAR" },
+        { "text": "Calendar", "href": "scheduling.html", "translate": "sidebar.nav.extra.CALENDAR" },
         { "text": "Invoice",  "href": "invoice.html", "translate": "sidebar.nav.extra.INVOICE" },
         { "text": "Search",   "href": "search.html", "translate": "sidebar.nav.extra.SEARCH" },
         { "text": "Todo List","href": "todo.html", "translate": "sidebar.nav.extra.TODO" },

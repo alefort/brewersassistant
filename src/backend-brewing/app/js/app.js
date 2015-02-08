@@ -31,7 +31,7 @@ var App = angular.module('brewingApp', ['ngRoute', 'ngAnimate', 'ngStorage', 'ng
               // Scope Globals
               // ----------------------------------- 
               $rootScope.app = {
-                name: 'BrewingApp',
+                name: 'Brewer\'s Assistant',
                 description: 'Brew beer',
                 year: ((new Date()).getFullYear()),
                 layout: {
@@ -337,10 +337,10 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         templateUrl: helper.basepath('timeline.html'),
         controller: 'NullController'
     })
-    .state('app.calendar', {
-        url: '/calendar',
-        title: 'Calendar',
-        templateUrl: helper.basepath('calendar.html'),
+    .state('app.scheduling', {
+        url: '/scheduling',
+        title: 'Brewing Schedule',
+        templateUrl: helper.basepath('scheduling.html'),
         controller: 'NullController',
         resolve: helper.resolveFor('jquery-ui', 'jquery-ui-widgets', 'moment', 'fullcalendar')
     })
@@ -2559,7 +2559,8 @@ App.controller('AppController',
       // list of available languages
       available: {
         'en':       'English',
-        'es_AR':    'Español'
+        'es_AR':    'Español',
+          'fr_CA':    'Francais'
       },
       // display always the current ui language
       init: function () {

@@ -1,26 +1,27 @@
 [
     {
-        "text": "Workflow",
+        "text": "Control Centre",
         "heading": "true",
         "translate": "sidebar.heading.HEADER"
     },
     {
         "text": "Dashboard",
-        "sref": "#",
+        "sref": "app.dashboard",
         "icon": "icon-speedometer",
-        "submenu": [
-            {"text": "Dashboard v1",       "sref": "app.dashboard"},
-            {"text": "Dashboard v2",       "sref": "app.dashboard_v2" },
-            {"text": "Dashboard v3",       "sref": "app.dashboard_v3" }
-        ],
         "translate": "sidebar.nav.DASHBOARD"
     },
     {
         "text": "Brewer's Assistant",
         "sref": "app.brewers-assistance",
         "icon": "fa fa-paperclip",
-        "alert": "2",
         "translate": "sidebar.nav.BREWERSASSISTANT"
+    },
+    {
+        "text": "Scheduling",
+        "sref": "app.scheduling",
+        "icon": "fa fa-calendar",
+        "alert": "3",
+        "translate": "sidebar.nav.SCHEDULING"
     },
     {
         "text": "Components",
@@ -38,26 +39,33 @@
         "text": "Recipes",
         "sref": "app.recipes",
         "icon": "fa fa-beer",
-        "alert": "2",
         "translate": "sidebar.nav.RECIPES"
     },
     {
         "text": "Inventory",
         "sref": "app.inventory",
-        "icon": "fa fa-calculator",
-        "alert": "2",
+        "icon": "fa fa-table",
+        "alert": "5",
         "translate": "sidebar.nav.inventory.INVENTORY",
         "submenu": [
-            {"text": "Fermentables",       "sref": "app.dashboard"},
-            {"text": "Hops",       "sref": "app.dashboard_v2" },
-            {"text": "Yeast",       "sref": "app.dashboard_v3" }
+            {
+                "text": "Fermentables",
+                "sref": "app.inventory.fermentables"
+            },
+            {
+                "text": "Hops",
+                "sref": "app.inventory.hops"
+            },
+            {
+                "text": "Yeast",
+                "sref": "app.inventory.yeast"
+            }
         ]
     },
     {
         "text": "Tools",
         "sref": "app.tools",
         "icon": "fa fa-calculator",
-        "alert": "2",
         "translate": "sidebar.nav.TOOLS"
     }
 ]
