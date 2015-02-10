@@ -44,7 +44,7 @@
     {
         "text": "Inventory",
         "sref": "app.inventory",
-        "icon": "fa fa-table",
+        "icon": "fa fa-bank",
         "alert": "5",
         "translate": "sidebar.nav.inventory.INVENTORY",
         "submenu": [

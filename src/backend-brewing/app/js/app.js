@@ -103,7 +103,8 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: '/recipes',
         title: 'Recipes',
         templateUrl: helper.basepath('recipes.html'),
-        controller: 'NullController'
+        controller: 'NullController',
+          resolve: helper.resolveFor('datatables', 'datatables-pugins')
     })
     .state('app.buttons', {
         url: '/buttons',
@@ -939,15 +940,15 @@ App.controller('CalendarController', ['$scope', function($scope) {
 
     return  [
               {
-                  title: 'All Day Event',
-                  start: new Date(y, m, 1),
+                  title: 'Brew Blonde Ale',
+                  start: new Date(y, m, 1,18,0),
                   backgroundColor: '#f56954', //red 
                   borderColor: '#f56954' //red
               },
               {
-                  title: 'Long Event',
-                  start: new Date(y, m, d - 5),
-                  end: new Date(y, m, d - 2),
+                  title: 'Blonde Fermentation',
+                  start: new Date(y, m, 2),
+                  end: new Date(y, m, 10),
                   backgroundColor: '#f39c12', //yellow
                   borderColor: '#f39c12' //yellow
               },
@@ -1106,86 +1107,34 @@ App.controller('DataTableController', ['$scope', '$timeout', function($scope, $t
   'use strict';
 
   // Define global instance we'll use to destroy later
-  var dtInstance1;
   var dtInstance2;
   var dtInstance3;
-  var dtInstance4;
 
   $timeout(function(){
 
     if ( ! $.fn.dataTable ) return;
 
     //
-    // Zero configuration
-    // 
-
-    dtInstance1 = $('#datatable1').dataTable({
-        'paging':   true,  // Table pagination
-        'ordering': true,  // Column ordering 
-        'info':     true,  // Bottom left status text
-        // Text translation options
-        // Note the required keywords between underscores (e.g _MENU_)
-        oLanguage: {
-            sSearch:      'Search all columns:',
-            sLengthMenu:  '_MENU_ records per page',
-            info:         'Showing page _PAGE_ of _PAGES_',
-            zeroRecords:  'Nothing found - sorry',
-            infoEmpty:    'No records available',
-            infoFiltered: '(filtered from _MAX_ total records)'
-        }
-    });
-
-
-    // 
-    // Filtering by Columns
-    // 
-
-    dtInstance2 = $('#datatable2').dataTable({
-        'paging':   true,  // Table pagination
-        'ordering': true,  // Column ordering 
-        'info':     true,  // Bottom left status text
-        // Text translation options
-        // Note the required keywords between underscores (e.g _MENU_)
-        oLanguage: {
-            sSearch:      'Search all columns:',
-            sLengthMenu:  '_MENU_ records per page',
-            info:         'Showing page _PAGE_ of _PAGES_',
-            zeroRecords:  'Nothing found - sorry',
-            infoEmpty:    'No records available',
-            infoFiltered: '(filtered from _MAX_ total records)'
-        }
-    });
-    var inputSearchClass = 'datatable_input_col_search';
-    var columnInputs = $('tfoot .'+inputSearchClass);
-
-    // On input keyup trigger filtering
-    columnInputs
-      .keyup(function () {
-          dtInstance2.fnFilter(this.value, columnInputs.index(this));
-      });
-
-
-    // 
     // Column Visibilty Extension
-    // 
+    //
 
-    dtInstance3 = $('#datatable3').dataTable({
+    dtInstance3 = $('#recipe-datatable').dataTable({
         'paging':   true,  // Table pagination
-        'ordering': true,  // Column ordering 
+        'ordering': true,  // Column ordering
         'info':     true,  // Bottom left status text
         // Text translation options
         // Note the required keywords between underscores (e.g _MENU_)
         oLanguage: {
-            sSearch:      'Search all columns:',
+            sSearch:      'Search recipes:',
             sLengthMenu:  '_MENU_ records per page',
             info:         'Showing page _PAGE_ of _PAGES_',
             zeroRecords:  'Nothing found - sorry',
-            infoEmpty:    'No records available',
+            infoEmpty:    'No recipes available',
             infoFiltered: '(filtered from _MAX_ total records)'
         },
         // set columns options
         'aoColumns': [
-            {'bVisible':false},
+            {'bVisible':true},
             {'bVisible':true},
             {'bVisible':true},
             {'bVisible':true},
@@ -1198,30 +1147,13 @@ App.controller('DataTableController', ['$scope', '$timeout', function($scope, $t
         }
     });
 
-    dtInstance4 = $('#datatable4').dataTable({
-        'paging':   true,  // Table pagination
-        'ordering': true,  // Column ordering 
-        'info':     true,  // Bottom left status text
-        sAjaxSource: 'server/datatable.json',
-        aoColumns: [
-          { mData: 'engine' },
-          { mData: 'browser' },
-          { mData: 'platform' },
-          { mData: 'version' },
-          { mData: 'grade' }
-        ]
-    });
-
   });
   
   // When scope is destroyed we unload all DT instances 
   // Also ColVis requires special attention since it attaches
   // elements to body and will not be removed after unload DT
   $scope.$on('$destroy', function(){
-    dtInstance1.fnDestroy();
-    dtInstance2.fnDestroy();
     dtInstance3.fnDestroy();
-    dtInstance4.fnDestroy();
     $('[class*=ColVis]').remove();
   });
 
