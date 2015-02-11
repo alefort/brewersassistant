@@ -17,32 +17,36 @@
 </h3>
 <!-- START widgets box-->
 <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <!-- START date widget-->
+        <div class="panel widget">
+            <div class="row row-table">
+                <div class="col-xs-4 text-center bg-green pv-lg">
+                    <!-- See formats: https://docs.angularjs.org/api/ng/filter/date-->
+                    <now format="MMMM" class="text-sm"></now>
+                    <br/>
+                    <now format="d" class="h2 mt0"></now>
+                </div>
+                <div class="col-xs-8 pv-lg">
+                    <now format="EEEE" class="text-uppercase"></now>
+                    <br/>
+                    <now format="h:mm" class="h2 mt0"></now>
+                    <now format="a" class="text-muted text-sm"></now>
+                </div>
+            </div>
+        </div>
+        <!-- END date widget    -->
+    </div>
    <div class="col-lg-3 col-sm-6">
       <!-- START widget-->
       <div class="panel widget bg-primary">
          <div class="row row-table">
             <div class="col-xs-4 text-center bg-primary-dark pv-lg">
-               <em class="icon-cloud-upload fa-3x"></em>
+               <em class="fa fa-clipboard fa-3x"></em>
             </div>
             <div class="col-xs-8 pv-lg">
-               <div class="h2 mt0">1700</div>
-               <div class="text-uppercase">Uploads</div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col-lg-3 col-sm-6">
-      <!-- START widget-->
-      <div class="panel widget bg-purple">
-         <div class="row row-table">
-            <div class="col-xs-4 text-center bg-purple-dark pv-lg">
-               <em class="icon-globe fa-3x"></em>
-            </div>
-            <div class="col-xs-8 pv-lg">
-               <div class="h2 mt0">700
-                  <small>GB</small>
-               </div>
-               <div class="text-uppercase">Quota</div>
+               <div class="h2 mt0">5</div>
+               <div class="text-uppercase">Recipes</div>
             </div>
          </div>
       </div>
@@ -52,35 +56,30 @@
       <div class="panel widget bg-green">
          <div class="row row-table">
             <div class="col-xs-4 text-center bg-green-dark pv-lg">
-               <em class="icon-bubbles fa-3x"></em>
+               <em class="fa fa-beer fa-3x"></em>
             </div>
             <div class="col-xs-8 pv-lg">
-               <div class="h2 mt0">500</div>
-               <div class="text-uppercase">Reviews</div>
+               <div class="h2 mt0">3</div>
+               <div class="text-uppercase">Batches in Progress</div>
             </div>
          </div>
       </div>
    </div>
-   <div class="col-lg-3 col-md-6 col-sm-12">
-      <!-- START date widget-->
-      <div class="panel widget">
-         <div class="row row-table">
-            <div class="col-xs-4 text-center bg-green pv-lg">
-               <!-- See formats: https://docs.angularjs.org/api/ng/filter/date-->
-               <now format="MMMM" class="text-sm"></now>
-               <br/>
-               <now format="d" class="h2 mt0"></now>
+    <div class="col-lg-3 col-sm-6">
+        <!-- START widget-->
+        <div class="panel widget bg-gray">
+            <div class="row row-table">
+                <div class="col-xs-4 text-center bg-gray-dark pv-lg">
+                    <em class="fa fa-beer fa-3x"></em>
+                </div>
+                <div class="col-xs-8 pv-lg">
+                    <div class="h2 mt0">4
+                    </div>
+                    <div class="text-uppercase">Batches Drank</div>
+                </div>
             </div>
-            <div class="col-xs-8 pv-lg">
-               <now format="EEEE" class="text-uppercase"></now>
-               <br/>
-               <now format="h:mm" class="h2 mt0"></now>
-               <now format="a" class="text-muted text-sm"></now>
-            </div>
-         </div>
-      </div>
-      <!-- END date widget    -->
-   </div>
+        </div>
+    </div>
 </div>
 <!-- END widgets box-->
 <div class="row">
@@ -173,12 +172,12 @@
                <div class="panel-body">
                   <div class="clearfix">
                      <h3 class="pull-left text-muted mt0">300</h3>
-                     <em class="pull-right text-muted fa fa-coffee fa-2x"></em>
+                     <em class="pull-right text-muted fa fa-beer fa-2x"></em>
                   </div>
                   <div sparkline="" data-type="line" data-height="80" data-width="100%" data-line-width="2" data-line-color="{{colorByName('purple')}}" data-spot-color="#888" data-min-spot-color="{{colorByName('purple')}}" data-max-spot-color="{{colorByName('purple')}}"
-                  data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="3" values="1,3,4,7,5,9,4,4,7,5,9,6,4" data-resize="true" class="pv-lg"></div>
+                  data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="3" values="19,0,21,38,57,0,19,21,42,57,57,72" data-resize="true" class="pv-lg"></div>
                   <p>
-                     <small class="text-muted">Actual progress</small>
+                     <small class="text-muted">Litres of beer brewed per Month</small>
                   </p>
                   <progressbar value="80" type="info" class="progress-striped progress-xs">80%</progressbar>
                </div>

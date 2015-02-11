@@ -31,14 +31,14 @@
     {
         "text": "Batches",
         "sref": "app.batches",
-        "icon": "fa fa-clipboard",
+        "icon": "fa fa-beer",
         "alert": "2",
         "translate": "sidebar.nav.batches.BATCHES"
     },
     {
         "text": "Recipes",
         "sref": "app.recipes",
-        "icon": "fa fa-beer",
+        "icon": "fa fa-clipboard",
         "translate": "sidebar.nav.RECIPES"
     },
     {
@@ -66,6 +66,20 @@
         "text": "Tools",
         "sref": "app.tools",
         "icon": "fa fa-calculator",
-        "translate": "sidebar.nav.TOOLS"
+        "translate": "sidebar.nav.TOOLS",
+        "submenu": [
+            {
+                "text": "ABV Calculator",
+                "sref": "app.tools.abvcalculator"
+            },
+            {
+                "text": "Hydrometer Adjustment",
+                "sref": "app.tools.hydrometer"
+            },
+            {
+                "text": "Yeast Starter Calculator",
+                "sref": "app.tools.yeast"
+            }
+        ]
     }
 ]

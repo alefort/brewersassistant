@@ -2,6 +2,10 @@
     "dashboard": {
         "WELCOME": "Welcome to {{appName}}"
     },
+    "recipes": {
+        "HEADER": "Recipes",
+        "SUBHEADER": "Your Beer Recipes"
+    },
     "topbar": {
         "messages": {
             "UNREAD": "Unread messages",
